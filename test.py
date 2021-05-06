@@ -1,1 +1,3 @@
-import example_pkg
+from flask_sqllite import app
+
+app.run()
