@@ -1,0 +1,18 @@
+<html>
+<body>
+    <a href="/"> Home</a><br>
+    <br>
+    <form method="POST" action="/query">
+        <input type="text" placeholder="SQL Query" name='query'>
+        <input type="text" placeholder="Optional name (to save)" name="name">
+        <input type="submit" value="Execute Query">
+    </form>
+    <label style="white-space: pre;">Last Operation: </label>
+    {{operation}}
+    <br>
+    <br>
+    {{data | safe}}
+    <br>
+    {{result | safe}}
+</body>
+</html>

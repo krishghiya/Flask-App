@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Flask SQLite</title>
+</head>
+<body>
+<h1>Welcome to the Flask Dashboard</h1>
+<h2>List of available DataFrames</h2>
+<form method="POST">
+<ol>
+      <input type="submit" value="Compare tables">
+      <label style="white-space: pre;">Common columns: </label>
+      {{message}}<br><br>
+      {% for i in range(size) %}
+  
+      <li>
+            <span>
+                  <input type="checkbox" name="{{files[i]}}">
+                  <a href="/{{files[i]}}" style="margin-right: 10px;">{{files[i]}}</a>
+                  {{shapes[i]}}
+                  <br>
+                  <br>
+            </span>
+            {{data_samples[i] | safe}}
+            <br>
+      </li>
+      {% endfor %}
+      <a href="/display/db">Database</a>
+</ol>
+</form>
+</body>
+</html>

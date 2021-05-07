@@ -1,3 +1,3 @@
-from flask_sqllite import app
+from flask_sqlite import app
 
 app.run()

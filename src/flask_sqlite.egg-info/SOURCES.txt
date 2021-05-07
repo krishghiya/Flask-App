@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/flask_sqlite/__init__.py
+src/flask_sqlite/app.py
+src/flask_sqlite.egg-info/PKG-INFO
+src/flask_sqlite.egg-info/SOURCES.txt
+src/flask_sqlite.egg-info/dependency_links.txt
+src/flask_sqlite.egg-info/top_level.txt
