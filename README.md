@@ -6,26 +6,27 @@ on a Flask Server
 ## Installation instructions:  
 Need python >= 3.6  
 
-1. Open a terminal and navigate to the project directory:
-`cd path/to/project`
+1. Open a terminal and navigate to the project directory:  
+`cd path/to/project`  
 
 2. Install dependencies  
 `pip install Flask`  
 `pip install pandas`  
 
-2. Install the .whl package:
-`pip install dist/flask_sqlite-0.0.1-py3-none-any.whl`
+2. Install the .whl package:  
+`pip install dist/flask_sqlite-0.0.1-py3-none-any.whl`  
 
-3. You can now import the package in any python script
-`from flask_sqlite import app`
+3. You can now import the package in any python script  
+`from flask_sqlite import app`  
 
 4. Start the server using app.run(). You can pass in optional arguments such as port  
-   just like in Flask
-`app.run(port=5000)`
+   just like in Flask  
+`app.run(port=5000)`  
 
-5. Go to a browser and visit localhost:port where port is your specified port
-http://localhost:5000/
-## Features
+5. Go to a browser and visit localhost:port where port is your specified port  
+http://localhost:5000/  
+
+## Features  
 
 - Load data from one on of the files in to a Pandas Data-Frame (DF) with unique name  
   Clicking on a file will load and display it   
