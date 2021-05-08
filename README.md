@@ -27,7 +27,7 @@ http://localhost:5000/
   Clicking on a file will load and display it   
 
 - Load data from SqlLite DB to DF with unique name  
-  You can execute queries  
+  You can execute queries and save the result to a DF with unique name(no spaces!)
 
 - Write DF into the SqlLite DB  
   You can insert any DF into the db by clicking the insert button  
