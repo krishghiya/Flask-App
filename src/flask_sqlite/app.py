@@ -6,6 +6,7 @@ import os
 app = Flask(__name__)
 
 custom_dfs = {}
+list_files = os.listdir(os.path.join(os.path.dirname(__file__), 'data'))
 
 def read(filename):
     return pd.read_csv('src/flask_sqlite/data/'+filename, quotechar='\"', skipinitialspace=True)
@@ -15,7 +16,7 @@ def connect():
 
 @app.route('/', methods=['GET'])
 def display(message=None):
-    files = os.listdir('src/flask_sqlite/data')
+    files = list_files[:]
     data_samples =  [read(f) for f in files]
     files += custom_dfs.keys()
     data_samples += custom_dfs.values()
@@ -32,7 +33,7 @@ def display_file(filename, sample=None, message=None):
     custom_bool = filename in custom_dfs.keys()
 
     # Test if file exists in folder
-    files = os.listdir('src/flask_sqlite/data')
+    files = list_files[:]
     
     if filename not in files and not custom_bool:
         return redirect('/')
@@ -114,7 +115,7 @@ def query():
     except:
         return display_db(operation="Fail")
 
-    files = os.listdir('src/flask_sqlite/data')
+    files = list_files[:]
     files = [s.split('.')[0] for s in files]
 
     if name in files or ' ' in name:
