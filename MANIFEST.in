@@ -1,0 +1,2 @@
+include src/flask_sqlite/data/*.csv
+include src/flask_sqlite/templates/*.html

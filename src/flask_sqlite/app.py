@@ -6,10 +6,11 @@ import os
 app = Flask(__name__)
 
 custom_dfs = {}
-list_files = os.listdir(os.path.join(os.path.dirname(__file__), 'data'))
+list_files = os.listdir(os.path.join(os.path.dirname(__file__), 'data'))[1:]
 
 def read(filename):
-    return pd.read_csv('src/flask_sqlite/data/'+filename, quotechar='\"', skipinitialspace=True)
+    return pd.read_csv(os.path.join(os.path.dirname(__file__), 'data', filename), quotechar='\"',
+                        skipinitialspace=True)
 
 def connect():
     return sqlite3.connect('src/flask_sqlite/db/data.db')
