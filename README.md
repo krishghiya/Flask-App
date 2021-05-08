@@ -21,7 +21,6 @@ Need python >= 3.6
 
 5. Go to a browser and visit localhost:port where port is your specified port
 http://localhost:5000/
-
 ## Features
 
 - Load data from one on of the files in to a Pandas Data-Frame (DF) with unique name  
@@ -43,4 +42,12 @@ http://localhost:5000/
 - For a given DF and a number N between 0 and 100, return the Nth percentile of all the  
   columns with numerical data type  
   You can click on a DF and then enter an integer between 0-100 to view the percentile results  
-  for each column
+  for each column  
+
+  ## Tests  
+
+1. To run tests you need pytest  
+`pip install pytest`  
+
+2. Navigate to the project directory and run the following command  
+`pytest`
