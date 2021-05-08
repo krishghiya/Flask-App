@@ -9,6 +9,10 @@ Need python >= 3.6
 1. Open a terminal and navigate to the project directory:
 `cd path/to/project`
 
+2. Install dependencies  
+`pip install Flask`  
+`pip install pandas`  
+
 2. Install the .whl package:
 `pip install dist/flask_sqlite-0.0.1-py3-none-any.whl`
 
@@ -51,3 +55,5 @@ http://localhost:5000/
 
 2. Navigate to the project directory and run the following command  
 `pytest`
+
+Also tested using Docker
